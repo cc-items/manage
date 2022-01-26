@@ -1,20 +1,22 @@
 const path = require("path");
 function resolve(dir) {
-  return path.join(__dirname, dir);//获取绝对路径
+  return path.join(__dirname, dir); //获取绝对路径
 }
 module.exports = {
-  // 简单配置别名
-  // configureWebpack: {
-  //   resolve: {
-  //     alias: {
-  //       assets: "@/assets",
-  //       components: "@/components",
-  //       network: "@/network",
-  //       utils: "@/utils",
-  //       views: "@/views",
-  //     },
-  //   },
-  // },
+  /*
+  简单配置别名
+  configureWebpack: {
+    resolve: {
+      alias: {
+        assets: "@/assets",
+        components: "@/components",
+        network: "@/network",
+        utils: "@/utils",
+        views: "@/views",
+      },
+    },
+  },
+  */
   chainWebpack: (config) => {
     // 删除prefetch
     config.plugins.delete("prefetch-index");
